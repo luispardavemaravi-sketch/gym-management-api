@@ -5,11 +5,22 @@ import com.gymproject.management.model.Usuario;
 import java.util.List;
 
 public interface UsuarioService {
-    Usuario guardarUsuario(Usuario usuario);
 
-    List<Usuario> ListarUsuarios();
+    //registra al usuario
+    Usuario registrar(Usuario usuario);
 
+
+    //lista a los usuarios
+    List<Usuario> ListarUsuarios( );
+
+
+    // busca a los usuarios por su id
     Usuario buscarUsuarioPorId(Long id);
+
+    Usuario actualizarUsuario( Long id , Usuario usuario);
+
+    // elimina
+    void eliminarUsuarioPorId(Long id);
 
 
 }
